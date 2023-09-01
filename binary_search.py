@@ -17,8 +17,7 @@ def binary_search(list: List, item: int) -> Optional[int]:
 
             
 my_list = [1, 2, 5, 5, 8, 9, 11, 29, 29, 30]
-print(binary_search(my_list, 1))
-print(binary_search(my_list, 5))
-print(binary_search(my_list, 8))
-print(binary_search(my_list, 11))
-print(binary_search(my_list, 29))
+items_for_search = [1, 5, 8, 11, 29]
+
+for i in items_for_search:
+    print(f'Значение {i} иммеет индекс {binary_search(my_list, i)}')

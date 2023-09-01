@@ -1,4 +1,5 @@
 from typing import List
+import time
 
 
 def find_smallest(arr: List) -> int:
@@ -18,5 +19,8 @@ def selection_sort(arr: List) -> List:
         new_arr.append(arr.pop(smallest))
     return new_arr
 
-
-print(selection_sort([5, 3, 6, 2, 10, 11]))
+my_list = [15, 64, 33, 44, 15, 0, 3, 46, 21, 99]
+print(f'Оригинальный список {my_list}')
+start_time = time.monotonic()
+print(f'Отсортированный список {selection_sort(my_list)}')
+print(f'Время выполнения алгоритма: {time.monotonic() - start_time}')
