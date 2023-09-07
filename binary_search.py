@@ -20,4 +20,4 @@ my_list = [1, 2, 5, 5, 8, 9, 11, 29, 29, 30]
 items_for_search = [1, 5, 8, 11, 29]
 
 for i in items_for_search:
-    print(f'Значение {i} иммеет индекс {binary_search(my_list, i)}')
+    print(f'Значение {i} имеет индекс {binary_search(my_list, i)}')

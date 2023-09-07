@@ -19,6 +19,7 @@ def selection_sort(arr: List) -> List:
         new_arr.append(arr.pop(smallest))
     return new_arr
 
+
 my_list = [15, 64, 33, 44, 15, 0, 3, 46, 21, 99]
 print(f'Оригинальный список {my_list}')
 start_time = time.monotonic()
