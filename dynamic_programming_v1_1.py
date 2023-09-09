@@ -38,7 +38,7 @@ def find_the_longest_substring(wrong_word: str) -> str:
         table.create_empty_matrix()
         table.fill_matrix(right_word, wrong_word)
         supposed_word, maximum = table.get_maximum_and_supposed_word(right_word, maximum, supposed_word)
-    return supposed_word
+    return supposed_word, maximum
 
 
 right_words = [
@@ -48,6 +48,7 @@ right_words = [
     'fade', 'fail'
     'fable', 'facet',
     'facia', 'fables',
+    'fort'
 ]
 wrong_words = [
     'fony', 'fosh',
@@ -55,6 +56,7 @@ wrong_words = [
 ]
 
 for word in wrong_words:
-    supposed_word = find_the_longest_substring(word)
+    supposed_word, maximum = find_the_longest_substring(word)
     print(f'Скорее всего, вы хотели ввести строку {supposed_word}, вместо {word}?')
+    print(f'Подстрока равна {maximum} элементов\n')
     
