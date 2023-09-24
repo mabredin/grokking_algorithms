@@ -1,6 +1,6 @@
-from typing import List
-import time
 from random import randint
+import time
+from typing import List
 
 
 # Версия, когда берется 1й элемент списка
