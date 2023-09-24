@@ -1,5 +1,6 @@
 from typing import List
-import time
+
+from decorators import time_of_function
 
 
 def find_smallest(arr: List) -> int:
@@ -12,6 +13,7 @@ def find_smallest(arr: List) -> int:
     return smallest_index
 
 
+@time_of_function
 def selection_sort(arr: List) -> List:
     new_arr = []
     for i in range(len(arr)):
@@ -22,6 +24,4 @@ def selection_sort(arr: List) -> List:
 
 my_list = [15, 64, 33, 44, 15, 0, 3, 46, 21, 99]
 print(f'Оригинальный список {my_list}')
-start_time = time.monotonic()
 print(f'Отсортированный список {selection_sort(my_list)}')
-print(f'Время выполнения алгоритма: {time.monotonic() - start_time}')
